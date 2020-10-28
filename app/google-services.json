@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "689844201139",
+    "firebase_url": "https://uaoremoto-f1b23.firebaseio.com",
+    "project_id": "uaoremoto-f1b23",
+    "storage_bucket": "uaoremoto-f1b23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689844201139:android:2c1bc4a4cccfad0e8332c6",
+        "android_client_info": {
+          "package_name": "com.example.uaoremoto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689844201139-qu0cdl55lhno245uerlgshspao697du9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmxdXPNoIfeSbO9TXV3yXlTc8J3AkuWwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689844201139-qu0cdl55lhno245uerlgshspao697du9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
