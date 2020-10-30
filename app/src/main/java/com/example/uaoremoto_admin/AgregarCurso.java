@@ -71,9 +71,9 @@ public class AgregarCurso extends AppCompatActivity {
                             //se crea la llave de registro
                             String id = databaseReference.push().getKey();
                             // se crea un objeto del tipo usuario
-                            Clase Clase = new Clase(id, name, numestudiantes, horarioC, idprofe, idaulaC);
+                            Curso Curso = new Curso(id, name, numestudiantes, horarioC, idprofe, idaulaC);
                             //Se guarda en Firebase
-                            databaseReference.child(id).setValue(Clase);
+                            databaseReference.child(id).setValue(Curso);
                             // Seteamos los campos
                             nombre.setText("");
                             numeroestudiantes.setText("");
@@ -81,7 +81,7 @@ public class AgregarCurso extends AppCompatActivity {
                             idprofesor.setText("");
                             idaula.setText("");
 
-                            Toast.makeText(getApplicationContext(), "Clase agregada", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Curso agregado", Toast.LENGTH_LONG).show();
 
                         }else{
                             Toast.makeText(getApplicationContext(), "Por favor ingrese un id de Aula", Toast.LENGTH_LONG).show();

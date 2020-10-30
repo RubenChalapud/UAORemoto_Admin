@@ -77,7 +77,6 @@ public class AdminCursos extends AppCompatActivity {
 
     // metodo que valida el evento clic para ingresar cursos
     private void initListner() {  // metodo que valida el evento clic para ingresar usuarios
-
         //  Al dar clic a un item de la lista
         listViewCursos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -91,7 +90,6 @@ public class AdminCursos extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -222,7 +220,8 @@ public class AdminCursos extends AppCompatActivity {
     }
 
     private void ClickAgregarCurso(View view){
-        //addUser();
+        Intent i = new Intent(AdminCursos.this, AgregarCurso.class);
+        startActivity(i);
     }
 
     private static void closeDrawer(DrawerLayout drawerLayout) {

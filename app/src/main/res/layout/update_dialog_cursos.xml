@@ -14,12 +14,6 @@
         android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/updateTextidcurso"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter id" />
-
-    <EditText
         android:id="@+id/updateTextname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
