@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InicioPortalAdmin"></activity>
+        <activity android:name=".AgregarCurso"></activity>
+        <activity android:name=".AdminCursos" />
+        <activity android:name=".InicioPortalAdmin" />
         <activity android:name=".LoginAdmin" />
         <activity android:name=".MainActivity">
             <intent-filter>

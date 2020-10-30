@@ -7,6 +7,22 @@
     tools:context=".InicioPortalAdmin"
     android:background="@drawable/backlogin">
 
+    <Button
+        android:id="@+id/btnEstudiantes"
+        android:layout_width="332dp"
+        android:layout_height="46dp"
+        android:background="@drawable/buttoninicio"
+        android:fontFamily="@font/semibold"
+        android:text="Estudiantes"
+        android:textColor="@color/blanco"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.848" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -54,33 +70,73 @@
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.313" />
 
     <Button
-        android:id="@+id/btnCursos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cursos"
+        android:id="@+id/btnClases"
+        android:layout_width="332dp"
+        android:layout_height="46dp"
+        android:background="@drawable/buttoninicio"
+        android:fontFamily="@font/semibold"
+        android:text="Clases"
+        android:textColor="@color/blanco"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintVertical_bias="0.538" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Profesores"
+        android:id="@+id/btnCursos"
+        android:layout_width="332dp"
+        android:layout_height="46dp"
+        android:background="@drawable/buttoninicio"
+        android:fontFamily="@font/semibold"
+        android:text="Cursos"
+        android:textColor="@color/blanco"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.424" />
+
+    <Button
+        android:id="@+id/btnProfesores"
+        android:layout_width="332dp"
+        android:layout_height="46dp"
+        android:background="@drawable/buttoninicio"
+        android:fontFamily="@font/semibold"
+        android:text="Profesores"
+        android:textColor="@color/blanco"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.643" />
+
+    <Button
+        android:id="@+id/btnAulas"
+        android:layout_width="332dp"
+        android:layout_height="46dp"
+        android:background="@drawable/buttoninicio"
+        android:fontFamily="@font/semibold"
+        android:text="Aulas"
+        android:textColor="@color/blanco"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

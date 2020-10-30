@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "689844201139-vkdbjt04uavotdv6vfefi474al3g02nk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.uaoremoto",
+            "certificate_hash": "3782c913aa6392fc6071986ff3e6c3bb841bd9f4"
+          }
+        },
+        {
           "client_id": "689844201139-qu0cdl55lhno245uerlgshspao697du9.apps.googleusercontent.com",
           "client_type": 3
         }
