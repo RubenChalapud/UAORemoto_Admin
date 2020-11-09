@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:padding="10dp"
+        android:text="Editar Estudiante"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/updateTextIdEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Codigo" />
+
+    <EditText
+        android:id="@+id/updateTextNomEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Nombre" />
+
+    <EditText
+        android:id="@+id/updateTextApeEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Apellido" />
+
+    <EditText
+        android:id="@+id/updateTextCorEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Correo" />
+
+    <EditText
+        android:id="@+id/updateTextContraEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Contraseña" />
+
+    <EditText
+        android:id="@+id/updateTextProEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Programa" />
+
+    <EditText
+        android:id="@+id/updateTextSinEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Sintomas" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/buttonDeleteUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete" />
+
+        <Button
+            android:id="@+id/buttonUpdateUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Update" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AgregarProfesor"></activity>
+        <activity android:name=".AgregarEstudiante"></activity>
+        <activity android:name=".AdminEstudiantes" />
+        <activity android:name=".AgregarProfesor" />
         <activity android:name=".AdminProfesores" />
         <activity android:name=".AgregarCurso" />
         <activity android:name=".AdminCursos" />

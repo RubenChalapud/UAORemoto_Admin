@@ -6,14 +6,16 @@ public class Estudiante {
     private String apellidoestudiante;
     private String correoestudiante;
     private String contraseñaestudiante;
+    private String programaestudiante;
     private String sintomasestudiante;
 
-    public Estudiante(String idestudiante, String nombreestudiante, String apellidoestudiante, String correoestudianteestudiante, String contraseñaestudiante, String sintomasestudiante){
+    public Estudiante(String idestudiante, String nombreestudiante, String apellidoestudiante, String correoestudianteestudiante, String contraseñaestudiante, String programaestudiante, String sintomasestudiante){
         this.idestudiante = idestudiante;
         this.nombreestudiante = nombreestudiante;
         this.apellidoestudiante = apellidoestudiante;
         this.correoestudiante = correoestudianteestudiante;
         this.contraseñaestudiante = contraseñaestudiante;
+        this.programaestudiante = programaestudiante;
         this.sintomasestudiante = sintomasestudiante;
     }
 
@@ -59,6 +61,14 @@ public class Estudiante {
 
     public void setContraseñaestudiante(String contraseñaestudiante) {
         this.contraseñaestudiante = contraseñaestudiante;
+    }
+
+    public String getProgramaestudiante() {
+        return programaestudiante;
+    }
+
+    public void setProgramaestudiante(String programaestudiante) {
+        this.programaestudiante = programaestudiante;
     }
 
     public String getSintomasestudiante() {
