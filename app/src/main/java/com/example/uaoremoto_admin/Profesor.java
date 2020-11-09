@@ -17,6 +17,10 @@ public class Profesor {
         this.sintomasprofesor=sintomasprofesor;
     }
 
+    public Profesor(){
+
+    }
+
     public String getIdprofesor() {
         return idprofesor;
     }
