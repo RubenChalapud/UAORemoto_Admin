@@ -14,10 +14,16 @@
         android:layout_height="wrap_content" />
 
     <EditText
+        android:id="@+id/updateTextIdCur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Id" />
+
+    <EditText
         android:id="@+id/updateTextname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter name" />
+        android:hint="Enter Nombre" />
 
     <EditText
         android:id="@+id/updateTextnumestudiantes"

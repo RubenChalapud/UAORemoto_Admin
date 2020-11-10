@@ -124,12 +124,14 @@ public class AdminCursos extends AppCompatActivity {
         dialogBuilder.setView(dialogView);
 
         //Definición de interfaces del layout update_dialog
+        final EditText updateTextid = (EditText) dialogView.findViewById(R.id.updateTextIdCur);
         final EditText updateTextname = (EditText) dialogView.findViewById(R.id.updateTextname);
         final EditText updateTextnumestudiantes = (EditText) dialogView.findViewById(R.id.updateTextnumestudiantes);
         final EditText updateTextHorario = (EditText) dialogView.findViewById(R.id.updateTexthorario);
         final EditText updateTextidprofe = (EditText) dialogView.findViewById(R.id.updateTextidprofesor);
         final EditText updateTextidaula = (EditText) dialogView.findViewById(R.id.updateTextidaula);
 
+        updateTextid.setText(idcurso);
         updateTextname.setText(nombrecurso);
         updateTextnumestudiantes.setText(numestudiantes);
         updateTextHorario.setText(horariocurso);
@@ -149,6 +151,7 @@ public class AdminCursos extends AppCompatActivity {
         buttonUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String id = updateTextid.getText().toString().trim();
                 String name = updateTextname.getText().toString().trim(); // capturo los datos
                 String numestudiantes = updateTextnumestudiantes.getText().toString().trim();
                 String horario = updateTextHorario.getText().toString().trim();
@@ -156,14 +159,16 @@ public class AdminCursos extends AppCompatActivity {
                 String idaula = updateTextidaula.getText().toString().trim();
                 //valido que los campos tenga información
 
-                if (!TextUtils.isEmpty(name)) {
-                    if (!TextUtils.isEmpty(numestudiantes)) {
-                        if (!TextUtils.isEmpty(horario)) {
-                            if(!TextUtils.isEmpty(idprofe)){
-                                if(!TextUtils.isEmpty(idaula)){
-                                    //Method for update data
-                                    updateUser(idcurso, name, numestudiantes, horario, idprofe, idaula); //llamo al metodo que  actualiza los datos en Firebase
-                                    b.dismiss(); // cierro la ventana
+                if(!TextUtils.isEmpty(id)){
+                    if (!TextUtils.isEmpty(name)) {
+                        if (!TextUtils.isEmpty(numestudiantes)) {
+                            if (!TextUtils.isEmpty(horario)) {
+                                if(!TextUtils.isEmpty(idprofe)){
+                                    if(!TextUtils.isEmpty(idaula)){
+                                        //Method for update data
+                                        updateUser(id, name, numestudiantes, horario, idprofe, idaula); //llamo al metodo que  actualiza los datos en Firebase
+                                        b.dismiss(); // cierro la ventana
+                                    }
                                 }
                             }
                         }

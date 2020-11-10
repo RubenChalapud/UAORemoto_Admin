@@ -14,7 +14,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class AgregarCurso extends AppCompatActivity {
-    private EditText nombre, numeroestudiantes, horario, idprofesor, idaula;
+    private EditText id, nombre, numeroestudiantes, horario, idprofesor, idaula;
     private Button btnAgregarC, btnRegresar;
 
     DatabaseReference databaseReference;
@@ -24,6 +24,7 @@ public class AgregarCurso extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_curso);
 
+        id = (EditText) findViewById(R.id.aTextIdCur);
         nombre = (EditText) findViewById(R.id.aTextname);
         numeroestudiantes = (EditText) findViewById(R.id.aTextnumestudiantes);
         horario = (EditText) findViewById(R.id.aTexthorario);
@@ -54,6 +55,7 @@ public class AgregarCurso extends AppCompatActivity {
 
     private void addUser() {
         //capturo los datos que deseo ingresar
+        String IdCur = id.getText().toString().trim();
         String name = nombre.getText().toString().trim();
         String numestudiantes = numeroestudiantes.getText().toString().trim();
         String horarioC = horario.getText().toString().trim();
@@ -62,42 +64,48 @@ public class AgregarCurso extends AppCompatActivity {
 
         //Valido que no esten vacios los campos
 
-        if (!TextUtils.isEmpty(name)) {
-            if (!TextUtils.isEmpty(numestudiantes)) {
-                if (!TextUtils.isEmpty(horarioC)) {
-                    if(!TextUtils.isEmpty(idprofe)){
-                        if(!TextUtils.isEmpty(idaulaC)){
+        if(!TextUtils.isEmpty(IdCur)){
+            if (!TextUtils.isEmpty(name)) {
+                if (!TextUtils.isEmpty(numestudiantes)) {
+                    if (!TextUtils.isEmpty(horarioC)) {
+                        if(!TextUtils.isEmpty(idprofe)){
+                            if(!TextUtils.isEmpty(idaulaC)){
 
-                            //se crea la llave de registro
-                            String id = databaseReference.push().getKey();
-                            // se crea un objeto del tipo usuario
-                            Curso Curso = new Curso(id, name, numestudiantes, horarioC, idprofe, idaulaC);
-                            //Se guarda en Firebase
-                            databaseReference.child(id).setValue(Curso);
-                            // Seteamos los campos
-                            nombre.setText("");
-                            numeroestudiantes.setText("");
-                            horario.setText("");
-                            idprofesor.setText("");
-                            idaula.setText("");
+                                //se crea la llave de registro
+                                //String id = databaseReference.push().getKey();
+                                // se crea un objeto del tipo usuario
+                                Curso Curso = new Curso(IdCur, name, numestudiantes, horarioC, idprofe, idaulaC);
+                                //Se guarda en Firebase
+                                databaseReference.child(IdCur).setValue(Curso);
+                                // Seteamos los campos
+                                id.setText("");
+                                nombre.setText("");
+                                numeroestudiantes.setText("");
+                                horario.setText("");
+                                idprofesor.setText("");
+                                idaula.setText("");
 
-                            Toast.makeText(getApplicationContext(), "Curso agregado", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Curso agregado", Toast.LENGTH_LONG).show();
 
+                            }else{
+                                Toast.makeText(getApplicationContext(), "Por favor ingrese un id de Aula", Toast.LENGTH_LONG).show();
+                            }
                         }else{
-                            Toast.makeText(getApplicationContext(), "Por favor ingrese un id de Aula", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Por favor ingrese un id de Profesor", Toast.LENGTH_LONG).show();
                         }
-                    }else{
-                        Toast.makeText(getApplicationContext(), "Por favor ingrese un id de Profesor", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Por favor ingrese un Horario", Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Toast.makeText(getApplicationContext(), "Por favor ingrese un Horario", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Por favor ingrese un Numero", Toast.LENGTH_LONG).show();
                 }
             } else {
-                Toast.makeText(getApplicationContext(), "Por favor ingrese un Numero", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Por favor ingrese un Nombre", Toast.LENGTH_LONG).show();
             }
-        } else {
-            Toast.makeText(getApplicationContext(), "Por favor ingrese un Nombre", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(getApplicationContext(), "Por favor ingrese un Id", Toast.LENGTH_LONG).show();
         }
+
 
     }
 }
