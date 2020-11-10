@@ -45,5 +45,13 @@ public class InicioPortalAdmin extends AppCompatActivity {
             }
         });
 
+        btnAulas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(InicioPortalAdmin.this, AdminAulas.class);
+                startActivity(i);
+            }
+        });
+
     }
 }
