@@ -75,7 +75,7 @@ public class AgregarClase extends AppCompatActivity {
                                 // se crea un objeto del tipo usuario
                                 Clase Clase = new Clase(idf, mod, asi, fec, idc, ide);
                                 //Se guarda en Firebase
-                                databaseReference.child(idClas).setValue(Clase);
+                                databaseReference.child(idf).setValue(Clase);
                                 // Seteamos los campos
                                 id.setText("");
                                 modo.setText("");
